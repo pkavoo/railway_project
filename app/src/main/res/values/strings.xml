@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">E-Ticketing</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stations">Train Stations</string>
+    <string name="trainClass">Train Stations</string>
+    <string name="pick_time">Pick Time</string>
+    <string-array name="stations">
+        <item>Nairobi to Mombasa</item>
+        <item>Nairobi to Nakuru</item>
+        <item>Nairobi to Eldoret</item>
+        <item>Nairobi to Kericho</item>
+        <item>nairobi to Kisumu</item>
+        <item>Nakuru to Eldoret</item>
+        <item>Eldoret to Kericho</item>
+        <item>Kericho to Kisumu</item>
+    </string-array>
+
+    <string-array name="trainClass">
+        <item>Business class</item>
+        <item>Economy class</item>
+    </string-array>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">M-Ticketing!</string>
+    <string name="slide_1_desc">Karibu!</string>
+
+    <string name="slide_2_title">M-Ticketing!</string>
+    <string name="slide_2_desc">Welcome to this great app!</string>
+
+    <string name="slide_3_title">M-Ticketing</string>
+    <string name="slide_3_desc">Book your tickets easily!</string>
+
+    <string name="slide_4_title">M-Ticketing!</string>
+    <string name="slide_4_desc">Enjoy the ride!</string>
+
+
+    <string-array name="train_classes">
+
+        <item>First class</item>
+
+        <item>Economy class</item>
+
+
+    </string-array>
+    <string name="select1">Choose a class</string>
+
+</resources>

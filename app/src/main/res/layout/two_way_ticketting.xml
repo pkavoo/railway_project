@@ -1,0 +1,179 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_centerHorizontal="true"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Choose Train Station"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/stations"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/train"
+
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:entries="@array/stations"
+            android:hint="Choose Stations"
+            android:prompt="@string/stations"
+            android:textColorHint="@color/colorAccent" />
+
+        <EditText
+
+            android:id="@+id/dptDate"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/stations"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/train"
+            android:layout_toStartOf="@+id/train"
+            android:hint="Depature Date"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="@color/accent_material_dark" />
+
+        <EditText
+            android:id="@+id/dptTime"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_above="@+id/arvDate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/stations"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/no_of_tickets"
+            android:layout_toRightOf="@+id/no_of_tickets"
+            android:hint="Depature Time"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#80cbc4" />
+
+        <EditText
+            android:id="@+id/arvDate"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/dptDate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/dptDate"
+            android:layout_below="@+id/dptDate"
+            android:layout_marginTop="30dp"
+            android:hint="Return Date"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#80cbc4" />
+
+        <EditText
+            android:id="@+id/arvTime"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/dptTime"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/dptTime"
+            android:layout_below="@+id/dptTime"
+            android:layout_marginTop="30dp"
+
+            android:hint="Return Time"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#80cbc4" />
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/no_of_tickets"
+            android:layout_alignLeft="@+id/no_of_tickets"
+            android:layout_alignStart="@+id/no_of_tickets"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Tickets"
+            android:textStyle="bold" />
+
+        <NumberPicker
+
+            android:id="@+id/no_of_tickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView"
+            android:layout_alignLeft="@+id/train"
+            android:layout_alignStart="@+id/train"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/train_class"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/btn_date"
+            android:layout_toRightOf="@+id/btn_date"
+            android:text="Choose Train Class"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/train_class"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pay"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:entries="@array/trainClass"
+            android:hint="Choose Train Class"
+            android:prompt="@string/trainClass"
+            android:textColorHint="@color/colorAccent" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/pay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtTime"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/txtTime"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_button"
+            android:padding="12dp"
+            android:text="Make Payment "
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal" />
+
+
+
+    </LinearLayout>
+</ScrollView>

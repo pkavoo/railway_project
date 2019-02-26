@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/train"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_centerHorizontal="true"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Choose Train Station"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/stations"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/train"
+
+            android:layout_gravity="center"
+            android:entries="@array/stations"
+            android:hint="Choose Stations"
+            android:prompt="@string/stations"
+            android:textColorHint="@color/colorAccent" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/txtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_date"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_marginLeft="60dp" />
+
+        <Button
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:id="@+id/btn_date"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_time"
+            android:layout_alignEnd="@+id/btn_time"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/btn_time"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:gravity="center"
+            android:text="Select Date" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- <EditText
+             android:inputType="number"
+             android:id="@+id/no_of_tickets"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/train_time"
+             android:layout_alignStart="@+id/train_time"
+             android:layout_below="@+id/train_time"
+             android:layout_marginTop="30dp"
+             android:hint="Enter number of Tickets" />
+ -->
+        <EditText
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtDate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/txtDate"
+            android:layout_alignTop="@+id/btn_time"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="40dp" />
+
+        <Button
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:id="@+id/btn_time"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:gravity="center"
+            android:text="Select Time"
+             />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/no_of_tickets"
+            android:layout_alignLeft="@+id/no_of_tickets"
+            android:layout_alignStart="@+id/no_of_tickets"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Tickets"
+             />
+
+        <NumberPicker
+            android:id="@+id/no_of_tickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView"
+            android:layout_alignLeft="@+id/train"
+            android:layout_alignStart="@+id/train"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/train_class"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/btn_date"
+            android:layout_toRightOf="@+id/btn_date"
+            android:text="Choose Train Class"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/train_class"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pay"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:entries="@array/trainClass"
+            android:hint="Choose Train Class"
+            android:prompt="@string/trainClass"
+            android:textColorHint="@color/colorAccent" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/pay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtTime"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/txtTime"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_button"
+            android:padding="12dp"
+            android:text="Make Payment "
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</ScrollView>
